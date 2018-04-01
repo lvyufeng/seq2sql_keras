@@ -103,3 +103,13 @@ ENV/
 
 # idea
 .idea/
+/idea/
+*.ipr
+*.iml
+*.iws
+
+
+#system ignore
+
+.DS_Store
+Thumbs.db
