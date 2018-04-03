@@ -38,5 +38,5 @@ def generate_embedding_layer(glove_path):
     return embeddings_layer
 
 
-glove_path = '../../glove/glove.42B.300d.txt'
-generate_embedding_layer(glove_path)
+# glove_path = '../../glove/glove.42B.300d.txt'
+# generate_embedding_layer(glove_path)
