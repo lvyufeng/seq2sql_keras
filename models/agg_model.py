@@ -13,7 +13,7 @@ def generate_model(max_words,embedding_dim,maxlen,embedding_matrix):
     # embedding_layer.trainable = False
 
     model.add(embedding_layer)
-    model.add(Bidirectional(LSTM(100, dropout=0.2)))
+    model.add(Bidirectional(LSTM(50, dropout=0.3,recurrent_dropout = 0.3)))
     # model.add(Bidirectional(LSTM(100, dropout=0.2)))
     model.add(Dense(100,activation='tanh'))
     model.add(Dense(7,activation='softmax'))

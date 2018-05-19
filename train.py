@@ -53,8 +53,7 @@ history = model.fit(train_data,train_agg,
                     epochs=100,
                     batch_size=32,
                     validation_data=(val_data,val_agg),
-                    verbose=2,
-                    validation_steps=32)
+                    verbose=2)
 
 model.save('trained_agg_model.h5')
 
