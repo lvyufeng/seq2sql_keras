@@ -118,3 +118,4 @@ data/*
 glove/*
 pre_trained_embedding/*
 saved_model/*
+*.h5
