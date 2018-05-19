@@ -1,16 +1,16 @@
 import json
-from nl2sql_keras.utils import load_embedding,generate_embedding_matrix
+from utils import load_embedding,generate_embedding_matrix
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
-from nl2sql_keras.models.agg_model import generate_model
-from nl2sql_keras.utils import load_data_agg,make_one_hot,tokenizer_data
+from models.agg_model import generate_model
+from utils import load_data_agg,make_one_hot,tokenizer_data
 
 
 # load training data
-train_path = '/Users/lvyufeng/PycharmProjects/keras_sequences/nl2sql_keras/data/data_resplit/train.jsonl'
+train_path = 'data/data_resplit/train.jsonl'
 nl_question,agg = load_data_agg(train_path)
 # load val data
-val_path = '/Users/lvyufeng/PycharmProjects/keras_sequences/nl2sql_keras/data/data_resplit/dev.jsonl'
+val_path = 'data/data_resplit/dev.jsonl'
 dev_question,dev_agg = load_data_agg(val_path)
 
 # tabel_path = '/Users/lvyufeng/PycharmProjects/keras_sequences/nl2sql_keras/data/data_resplit/tables.jsonl'
@@ -36,7 +36,7 @@ word_index,train_data = tokenizer_data(nl_question,max_words,maxlen)
 word_index2,val_data = tokenizer_data(dev_question,max_words,maxlen)
 # load pre-trained word embedding
 
-glove_dir = '/Users/lvyufeng/PycharmProjects/keras_sequences/nl2sql_keras/pre_trained_embedding/glove.42B.300d.txt'
+glove_dir = 'pre_trained_embedding/glove.42B.300d.txt'
 embedding_index = load_embedding(glove_dir)
 
 # print(len(embedding_index))

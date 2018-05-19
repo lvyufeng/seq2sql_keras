@@ -1,7 +1,7 @@
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
-from nl2sql_keras.models.agg_model import generate_model
-from nl2sql_keras.utils import load_embedding,generate_embedding_matrix
+from models.agg_model import generate_model
+from utils import load_embedding,generate_embedding_matrix
 import json
 
 sql_path = '/Users/lvyufeng/PycharmProjects/keras_sequences/nl2sql_keras/data/data_resplit/test.jsonl'
