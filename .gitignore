@@ -116,3 +116,5 @@ Thumbs.db
 
 data/*
 glove/*
+pre_trained_embedding/*
+saved_model/*
